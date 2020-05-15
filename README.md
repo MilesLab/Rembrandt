@@ -26,7 +26,7 @@ BiocManager::install("Rsubread")
 
 # Protocol for Analyses
 
-##De-multiplexing Reads
+## De-multiplexing Reads
 
 Prior to aligning the ‘fastq’ files, we need to demultiplex RNASeq reads using the ShortRead Bioconductor R package. This will separate the initial multiplexed ‘fastq’ file into smaller files for each patient sample. Of note, given that we are using paired-end data, both files must be ordered in the same way and care must be ensured to ensure that this order is preserved. The steps for de-multiplexing reads are as follows:
 
@@ -83,7 +83,7 @@ compress=FALSE)
 writeFastq(fqsub2,{fq_plate_barcodeY_illumina_barcodeX_pair2_filepath},mode="a",
 compress=FALSE)
 ```
-•	Final ‘fastq’ files from plate demultiplexing will be used for patient-specific barcodes
+•Final ‘fastq’ files from plate demultiplexing will be used for patient-specific barcodes
 
 5. Demultiplexing based on patient
 •	Similar to demultiplexing based on Illumina and plate-specific barcode
@@ -111,7 +111,7 @@ writeFastq(fqsub2,{fq_patient_barcodeZ_plate_barcode_Y_illumina_barcodeX_pair2_f
 
 6. Rename resulting ‘fastq’ files. This step can be done at the end also. However it may be good practice to change the names of the fastq files to patient IDs using the patient mapping CSV file early on. 
 
-Mapping Reads and Determining Gene Counts
+## Mapping Reads and Determining Gene Counts
 
 After the files have been demultiplexed, we can then proceed with the process of mapping reads to genes using RSubread Bioconductor R package using the following steps. 
 
@@ -129,8 +129,9 @@ buildindex(basename="./reference_index",reference=”cov_ref.fa”)
 ```
 3. Create annotation file for gene counts
 •	A Simplified Annotation Format (SAF) file should be created for each of the genes in the format below.
-
+```
 GeneID  Chr Start End Strand
+```
 
 4.  Map ‘fastq’ reads and determine gene counts for each patient to nCoV, Human RPP30, and SARS CoV
 •	Using built index and selected ‘fastq’ files for a patient, align reads to genes as below. 
@@ -143,7 +144,7 @@ featureCounts(files=“./{Rsubread_alignment}.bam”, annot.ext=saf_file)
 ```
 •	The gene counts can then be assembled all patients into matrix that can be used further analyses.
 
-Running the Routines
+## Running the Routines
 
 Of note, users can choose different ways of running these routines. The straightforward way of running the routines is demultiplex successively by each set of barcodes and then perform the alignments as a loop. However this can result in a large number of files waiting to be alignment. One solution that we will incorporate is the parLappy() function from the snow R package to parallelize the alignment steps. Additionally, the user may start by splitting files based on Illumina barcodes and then demultiplex and align files with one type of Illumina barcode before proceeding to the next Illumina barcodes. The different routines can be run based on the system’s needs and specifications.  
 
