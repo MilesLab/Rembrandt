@@ -1,5 +1,7 @@
 # Rembrandt
 
+#### This is the development branch of the repository where newly developed code will be deposited and tested.
+
 The following repository will contain R codes for analyses of paired end COVID-19 sequencing data from Rembrandt. At the moment, this is still under construction, however a protocol for the analysis is provided.  
 
 # Required Tools
