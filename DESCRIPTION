@@ -1,15 +1,20 @@
 Package: Rembrandt
-Title: What the Package Does (One Line, Title Case)
+Title: REMBRANDT
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Jalal",
+           family = "Siddiqui",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "jalal.siddiqui@osu.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The R package contains functions for processing RNASeq paired-end datasets from the REMBRANT assays. This include functions for splitting fastq files based on barcodes. In addition,the R package includes COVID fasta files and an SAF annotation file for gene alignments.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
+Imports:
+    rmarkdown,
+    Biobase,
+    ShortRead,
+    Rsubread
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
