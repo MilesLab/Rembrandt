@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Jalal",
            family = "Siddiqui",
            role = c("aut", "cre"),
-           email = "jalal.siddiqui@osu.edu",
+           email = "jalal.siddiqui@osumc.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: The R package contains functions for processing RNASeq paired-end datasets from the REMBRANT assays. This include functions for splitting fastq files based on barcodes. In addition,the R package includes COVID fasta files and an SAF annotation file for gene alignments.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
