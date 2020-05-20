@@ -27,8 +27,10 @@ f1 <- ShortRead::FastqStreamer(pair1_filepath, nreads)
 f2 <- ShortRead::FastqStreamer(pair2_filepath, nreads)
 fq1 <- ShortRead::yield(f1)
 fq2 <- ShortRead::yield(f2)
-on.exit(close(fq1))
-on.exit(close(fq2))
+
+on.exit(close(f1))
+on.exit(close(f2))
+
 while(length(fq1)){
 
 
@@ -49,7 +51,12 @@ while(length(fq1)){
 
 }
 
-split_well_barcodes = data.frame(reverse_barcode,
+initial_files1 = rep(pair1_filepath, length(reverse_barcode))
+initial_files2 = rep(pair2_filepath, length(reverse_barcode))
+
+split_well_barcodes = data.frame(initial_files1,
+                                 initial_files2,
+                                 reverse_barcode,
                                   reverse_barcoded_files1,
                                   reverse_barcoded_files2,
                                   stringsAsFactors = F)
