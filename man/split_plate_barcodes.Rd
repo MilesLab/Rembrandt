@@ -18,6 +18,8 @@ split_plate_barcodes(
 \item{pair2_filepath}{file path of the second paired end file}
 
 \item{nreads}{number of reads to iterate by}
+
+\item{output_prefix}{The output prefix for the output files}
 }
 \description{
 Split fastq files by the plate barcodes provided

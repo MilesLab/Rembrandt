@@ -5,7 +5,7 @@
 #' @param pair1_filepath file path of the first paired end file
 #' @param pair2_filepath file path of the second paired end file
 #' @param nreads number of reads to iterate by
-#' @output_prefix The output prefix for the output files
+#' @param output_prefix The output prefix for the output files
 #'
 #' @export
 #'
