@@ -6,6 +6,7 @@
 #' @param pair2_filepath file path of the second paired end file
 #' @param nreads number of reads to iterate by
 #' @param output_prefix The output prefix for the output files
+#' @param forward_barcode A character vector with the foward barcodes
 #'
 #' @export
 #'
@@ -47,5 +48,13 @@ while(length(fq1)){
 
 }
 
+split_plate_barcodes = data.frame(forward_barcode,
+                                  forward_barcoded_files1,
+                                  forward_barcoded_files2,
+                                  stringsAsFactors = F)
+
+return(split_plate_barcodes)
 }
+
+
 
