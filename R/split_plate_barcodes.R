@@ -6,7 +6,7 @@
 #' @param pair2_filepath file path of the second paired end file
 #' @param nreads number of reads to iterate by
 #' @param output_prefix The output prefix for the output files
-#' @param forward_barcode A character vector with the foward barcodes
+#' @param forward_barcode A character vector with the forward barcodes
 #'
 #' @export
 #'
