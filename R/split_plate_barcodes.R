@@ -27,7 +27,8 @@ f1 <- ShortRead::FastqStreamer(pair1_filepath, nreads)
 f2 <- ShortRead::FastqStreamer(pair2_filepath, nreads)
 fq1 <- ShortRead::yield(f1)
 fq2 <- ShortRead::yield(f2)
-
+on.exit(close(fq1))
+on.exit(close(fq2))
 while(length(fq1)){
 
 
