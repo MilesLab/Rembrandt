@@ -33,6 +33,10 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("Rsubread")
 ```
 
+# Current File Requirements
+
+**Given that we are using paired-end data, it is a requirement that both pairs must be ordered in exactly the same way or these functions will not work correctly**
+
 # Vignette and Data
 
 The package includes a 'fasta' file and SAF annotation file for amplicon sequences as well as test data.
