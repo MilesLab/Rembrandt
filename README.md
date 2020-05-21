@@ -49,6 +49,10 @@ A vignette is provided for running this package. Due to space constraints, we ho
 
 [https://mileslab.github.io/UsingRembrandt.html](https://mileslab.github.io/UsingRembrandt.html)
  
+Given that the vignette results can be overwhelming, an 'html' for a vignette with no code evaluation is provided.  This allows you to work on your own system.
+
+[https://mileslab.github.io/UsingRembrandt_nocode.html](https://mileslab.github.io/UsingRembrandt_nocode.html)
+
 The .Rmd file for the vignette is available at this link
 
 [https://mileslab.github.io/vignette_rmd.zip](https://mileslab.github.io/vignette_rmd.zip)
