@@ -69,3 +69,7 @@ If you use any of our codes, please cite as below:
 
 **Palmieri, Dario, et al. "REMBRANDT: A high-throughput barcoded sequencing approach for COVID-19 screening." bioRxiv (2020).**
 
+# Contact
+
+If you have any questions, comments, and suggestions for our software, please contact <jalal.siddiqui@osumc.edu>
+
